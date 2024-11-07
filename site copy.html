@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de Dessin</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        .canvas-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+
+        #drawingCanvas {
+            border: 4px solid #333;
+            background-color: #fff;
+            cursor: crosshair;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            margin-right: 20px;
+        }
+
+        .toolbar button {
+            padding: 12px 18px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .toolbar button:hover {
+            background-color: #45a049;
+        }
+
+        .color-picker {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+        }
+
+        .color {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #333;
+            transition: transform 0.2s;
+        }
+
+        .color:hover {
+            transform: scale(1.2);
+        }
+
+        .size-control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .size-control input[type="range"] {
+            width: 100%;
+        }
+
+        .toolbar label {
+            font-size: 16px;
+        }
+
+        .toolbar .size-control {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="canvas-container">
+    <div class="toolbar">
+        <h3>Outils de Dessin</h3>
+        
+        <!-- Palette de couleurs -->
+        <div class="color-picker">
+            <div class="color" style="background-color: black;" onclick="setColor('#000')"></div>
+            <div class="color" style="background-color: red;" onclick="setColor('#f00')"></div>
+            <div class="color" style="background-color: green;" onclick="setColor('#0f0')"></div>
+            <div class="color" style="background-color: blue;" onclick="setColor('#00f')"></div>
+            <div class="color" style="background-color: yellow;" onclick="setColor('#ff0')"></div>
+            <div class="color" style="background-color: orange;" onclick="setColor('#ffa500')"></div>
+            <div class="color" style="background-color: purple;" onclick="setColor('#800080')"></div>
+            <div class="color" style="background-color: cyan;" onclick="setColor('#0ff')"></div>
+            <div class="color" style="background-color: magenta;" onclick="setColor('#f0f')"></div>
+            <div class="color" style="background-color: gray;" onclick="setColor('#808080')"></div>
+        </div>
+
+        <!-- Contrôles supplémentaires -->
+        <div class="size-control">
+            <label for="sizeRange">Taille du trait:</label>
+            <input type="range" id="sizeRange" min="1" max="20" value="5" onchange="setLineWidth(this.value)">
+        </div>
+        
+        <button onclick="clearCanvas()">Effacer Tout</button>
+        <button onclick="toggleEraser()">Mode Gomme</button>
+        <button onclick="saveImage()">Enregistrer</button>
+    </div>
+
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+</div>
+
+<script>
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
+    let drawing = false;
+    let currentColor = "#000";  // Couleur par défaut (noir)
+    let lineWidth = 5;          // Taille du trait par défaut
+    let isEraserMode = false;   // Mode gomme désactivé par défaut
+
+    // Charger l'image de fond
+    const backgroundImage = new Image();
+    backgroundImage.src = 'background-image-url.png'; // Remplacez par le lien ou le chemin vers votre image en noir et blanc
+
+    backgroundImage.onload = () => {
+        // Dessine l'image de fond une fois qu'elle est chargée
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    };
+
+    canvas.addEventListener("mousedown", startDrawing);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", stopDrawing);
+    canvas.addEventListener("mouseleave", stopDrawing);
+
+    function setColor(color) {
+        currentColor = color;
+        isEraserMode = false; // Sort du mode gomme quand on choisit une couleur
+    }
+
+    function setLineWidth(size) {
+        lineWidth = size;
+    }
+
+    function toggleEraser() {
+        isEraserMode = !isEraserMode;
+        if (isEraserMode) {
+            ctx.globalCompositeOperation = "destination-out"; // Active le mode gomme
+        } else {
+            ctx.globalCompositeOperation = "source-over"; // Retourne au mode dessin
+        }
+    }
+
+    function startDrawing(event) {
+        drawing = true;
+        draw(event); // Dessine dès le premier clic
+    }
+
+    function draw(event) {
+        if (!drawing) return;
+
+        ctx.lineWidth = lineWidth;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = isEraserMode ? "#fff" : currentColor; // Utilise la couleur actuelle ou blanc pour effacer
+
+        ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        ctx.beginPath(); // Recommence un nouveau chemin
+    }
+
+    function clearCanvas() {
+        // Efface tout et redessine l'image de fond
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    }
+
+    function saveImage() {
+        const link = document.createElement('a');
+        link.download = 'dessin.png'; // Nom du fichier et format (png par défaut)
+        link.href = canvas.toDataURL('image/png'); // Format d'image (png ou jpg)
+        link.click(); // Déclenche le téléchargement
+    }
+</script>
+
+</body>
+</html>

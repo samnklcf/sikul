@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="h-full antialiased" lang="en">
+  <!-- Mirrored from app.createbookai.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Oct 2024 07:29:18 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+
+  /><!-- /Added by HTTrack -->
+  <head>
+    
+
+    <title>Liste des livres</title>
+
+    <link rel="canonical" href="index.html" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.html" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f96416" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-param" content="authenticity_token" />
+    
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="../rsms.me/inter/inter.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/application-875de01e.css"
+      data-turbo-track="reload"
+    />
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script
+      src="assets/application-246ed5db.js"
+      data-turbo-track="reload"
+      type="module"
+    ></script>
+
+    
+  </head>
+
+  <body class="bg-neutral-50 flex flex-col min-h-screen">
+    <div
+    class="bg-white flex w-full py-3 px-4 justify-between items-center border-b border-gray-200"
+  >
+    <div class="flex items-center">
+      <a
+        class="hover:opacity-70 transition-opacity flex items-start mr-10"
+        href="/home.html"
+      >
+        <img src="./assets/images/sik.png" width="50" srcset="">
+      </a>
+      <a
+        class="mr-6 hover:text-accent-600 transition-colors font-medium text-accent-600"
+        href="home.html"
+      >
+        <span>Mes livres</span>
+      </a>
+      <a
+        class="hover:text-accent-600 transition-colors font-medium text-neutral-700"
+        href="./community.html"
+      >
+        <span class="">Découvertes</span>
+      </a>
+    </div>
+
+    <nav class="flex items-center" data-controller="shared--darkmode">
+      <a
+        data-turbo-frame="modal"
+        class=" button-secondary mr-2"
+        href="/compte.html"
+        > <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewbox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        aria-hidden="true"
+        class="w-5 h-5 text-neutral-700 dark:text-neutral-400"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+        ></path>
+      </svg>Mon compte</a
+      >
+    </nav>
+  </div>
+
+    
+
+    <div class="container">
+      <div class="flex items-center justify-between mt-8">
+        <div class="">
+          <h1 class="h1">Mes livres</h1>
+          <p>
+            Vous pouvez prévisualiser, télécharger ou modifier tous vos livres ici. Vous pouvez également créer un nouveau livre quand vous le souhaitez.
+          </p>
+        </div>
+        <a class="button-primary" href="/create-livre.html">Nouveau livre</a>
+      </div>
+      
+
+      <div id="books" class="mt-8 grid grid-cols-2 gap-8 pb-8">
+        <div class="flex border border-gray-200 rounded-lg p-4 bg-white">
+          <img
+            class="w-1/4 shadow border-r-2 border-b-2 border-gray-300 rounded-md"
+            src="./assets/images/ZRR.jpg"
+          />
+
+          <div class="pl-8 flex flex-col justify-between">
+            <div class="">
+              <h3 class="font-bold text-lg leading-loose">
+                Les animaux et le manguier sauvage
+              </h3>
+              <ul class="text-sm mt-2">
+                <li><span class="text-gray-500">Longueur:</span> 12 pages</li>
+                <li>
+                  <span class="text-gray-500">Créé le:</span> 22/10/2024
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <a
+                class="button-secondary"
+                href="/Book-read.html"
+                >Ouvrir</a
+              >
+
+              <div class="relative" data-controller="shared--dropdown">
+                <div
+                  data-action="click->shared--dropdown#toggle click@window->shared--dropdown#hide touch->shared--dropdown#toggle touch@window->shared--dropdown#hide"
+                  role="button"
+                  class="flex select-none"
+                >
+                  <div class="button-transparent p-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewbox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                      class="w-5 h-5 text-neutral-700"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  data-shared--dropdown-target="menu"
+                  class="z-30 hidden mt-2 absolute right-0 w-48"
+                  data-transition-enter-active="transition ease-out duration-100"
+                  data-transition-enter-from="transform opacity-0 -translate-y-2"
+                  data-transition-enter-to="transform opacity-100 translate-y-0"
+                  data-transition-leave-active="transition ease-in duration-100"
+                  data-transition-leave-from="transform opacity-100 translate-y-0"
+                  data-transition-leave-to="transform opacity-0 -translate-y-2"
+                >
+                  <div
+                    class="overflow-hidden bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-md shadow-sm p-1"
+                  >
+                    <form
+                      class="button_to"
+                      method="post"
+                      action="/books/kofi-and-the-enchanted-necklace-the-quest-to-bring-the-rain"
+                    >
+                      <input
+                        type="hidden"
+                        name="_method"
+                        value="delete"
+                        autocomplete="off"
+                      /><button
+                        class="no-underline w-full flex items-center px-4 py-2 rounded text-sm bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900 group transition-colors whitespace-nowrap text-red-600 hover:text-red-500 dark:text-red-600 dark:hover:text-red-500"
+                        data-turbo-confirm="You are about to delete Kofi and the Enchanted Necklace: The Quest to Bring the Rain. Are you sure?"
+                        type="submit"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewbox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                          class="w-4 h-4 mr-2 -ml-1"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                          ></path>
+                        </svg>
+
+                        <span
+                          class="font-medium text-neutral-600 dark:text-neutral-300 dark:group-hover:text-neutral-300 transition-colors text-sm"
+                          >Supprimer le Livre</span
+                        ></button
+                      ><input
+                        type="hidden"
+                        name="authenticity_token"
+                        autocomplete="off"
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-auto border-t border-gray-200 p-3 text-sm">
+      <p class="">Sikul © 2024 by Alissa IA</p>
+
+      <div class="space-x-4">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Conditions d'utilisation
+        </a>
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Politique de confidentialité
+        </a>
+        
+      </div>
+    </div>
+
+    
+  </body>
+
+</html>

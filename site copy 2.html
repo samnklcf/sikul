@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de Dessin</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        #drawingCanvas {
+            border: 2px solid #333;
+            background-color: #fff;
+            cursor: crosshair;
+            margin-top: 20px;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toolbar button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 5px;
+        }
+
+        .color {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        .size-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="toolbar">
+    <div class="color-picker">
+        <div class="color" style="background-color: black;" onclick="setColor('#000')"></div>
+        <div class="color" style="background-color: red;" onclick="setColor('#f00')"></div>
+        <div class="color" style="background-color: green;" onclick="setColor('#0f0')"></div>
+        <div class="color" style="background-color: blue;" onclick="setColor('#00f')"></div>
+        <div class="color" style="background-color: yellow;" onclick="setColor('#ff0')"></div>
+        <div class="color" style="background-color: orange;" onclick="setColor('#ffa500')"></div>
+        <div class="color" style="background-color: purple;" onclick="setColor('#800080')"></div>
+        <div class="color" style="background-color: cyan;" onclick="setColor('#0ff')"></div>
+        <div class="color" style="background-color: magenta;" onclick="setColor('#f0f')"></div>
+        <div class="color" style="background-color: gray;" onclick="setColor('#808080')"></div>
+    </div>
+    <button onclick="clearCanvas()">Effacer Tout</button>
+    <button onclick="toggleEraser()">Mode Gomme</button>
+    <div class="size-control">
+        <label for="sizeRange">Taille:</label>
+        <input type="range" id="sizeRange" min="1" max="20" value="5" onchange="setLineWidth(this.value)">
+    </div>
+    <button onclick="saveImage()">Enregistrer</button>
+</div>
+
+<canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+<script>
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
+    let drawing = false;
+    let currentColor = "#000";  // Couleur par défaut (noir)
+    let lineWidth = 5;          // Taille du trait par défaut
+    let isEraserMode = false;   // Mode gomme désactivé par défaut
+
+    // Dessiner le fond blanc au début
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Charger l'image de fond (si elle existe)
+    const backgroundImage = new Image();
+    backgroundImage.src = 'background-image-url.png'; // Remplacez par le lien ou le chemin vers votre image en noir et blanc
+
+    backgroundImage.onload = () => {
+        // Dessine l'image de fond une fois qu'elle est chargée
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    };
+
+    canvas.addEventListener("mousedown", startDrawing);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", stopDrawing);
+    canvas.addEventListener("mouseleave", stopDrawing);
+
+    function setColor(color) {
+        currentColor = color;
+        isEraserMode = false; // Sort du mode gomme quand on choisit une couleur
+    }
+
+    function setLineWidth(size) {
+        lineWidth = size;
+    }
+
+    function toggleEraser() {
+        isEraserMode = !isEraserMode;
+        if (isEraserMode) {
+            ctx.globalCompositeOperation = "destination-out"; // Active le mode gomme
+        } else {
+            ctx.globalCompositeOperation = "source-over"; // Retourne au mode dessin
+        }
+    }
+
+    function startDrawing(event) {
+        drawing = true;
+        draw(event); // Dessine dès le premier clic
+    }
+
+    function draw(event) {
+        if (!drawing) return;
+
+        ctx.lineWidth = lineWidth;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = isEraserMode ? "#fff" : currentColor; // Utilise la couleur actuelle ou blanc pour effacer
+
+        ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        ctx.beginPath(); // Recommence un nouveau chemin
+    }
+
+    function clearCanvas() {
+        // Efface tout et redessine l'image de fond
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#fff";  // Assure un fond blanc
+        ctx.fillRect(0, 0, canvas.width, canvas.height); // Remet un fond blanc
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height); // Redessine l'image de fond si elle existe
+    }
+
+    function saveImage() {
+        // Assurer qu'il y a un fond blanc avant d'enregistrer
+        const backgroundData = ctx.getImageData(0, 0, canvas.width, canvas.height);  // Sauvegarde de l'état actuel
+        ctx.fillStyle = "#fff"; // Fond blanc
+        ctx.fillRect(0, 0, canvas.width, canvas.height); // Remet le fond blanc
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height); // Redessine l'image de fond (si elle existe)
+
+        const link = document.createElement('a');
+        link.download = 'dessin.png'; // Nom du fichier et format (png par défaut)
+        link.href = canvas.toDataURL('image/png'); // Format d'image (png ou jpg)
+        link.click(); // Déclenche le téléchargement
+
+        // Restaure l'état original du canvas après le téléchargement
+        ctx.putImageData(backgroundData, 0, 0); // Restaure l'état précédent du canevas
+    }
+</script>
+
+</body>
+</html>

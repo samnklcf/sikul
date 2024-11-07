@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="h-full antialiased" lang="en">
+  <!-- Mirrored from app.createbookai.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Oct 2024 07:29:18 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    
+
+    <title>Log in | CrateBookAi</title>
+
+    <link rel="canonical" href="index.html" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.html" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f96416" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="_988_UnB7jvOJn7N8fgD62oArvOldtkWI1jcN3HxGJYj3x1bSXsOyAggSzO-m1YVapusRM04trLkJxsIo5xEKQ"
+    />
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="../rsms.me/inter/inter.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/application-875de01e.css"
+      data-turbo-track="reload"
+    />
+    <script
+      src="assets/application-246ed5db.js"
+      data-turbo-track="reload"
+      type="module"
+    ></script>
+    
+  </head>
+
+  <body class="bg-neutral-50 flex flex-col min-h-screen">
+    <div
+      class="bg-white flex w-full py-3 px-4 justify-between items-center border-b border-gray-200"
+    >
+      <div class="flex items-center">
+        <a
+          class="hover:opacity-70 transition-opacity flex items-start mr-10"
+          href="/home.html"
+        >
+          <img src="./assets/images/sik.png" width="50" srcset="">
+        </a>
+        <a
+          class="mr-6 hover:text-accent-600 transition-colors font-medium text-accent-600"
+          href="home.html"
+        >
+          <span>Mes livres</span>
+        </a>
+        <a
+          class="hover:text-accent-600 transition-colors font-medium text-neutral-700"
+          href="./community.html"
+        >
+          <span class="">Découvertes</span>
+        </a>
+      </div>
+
+      <nav class="flex items-center" data-controller="shared--darkmode">
+        <a
+          data-turbo-frame="modal"
+          class=" button-secondary mr-2"
+          href="/compte.html"
+          > <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewbox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="w-5 h-5 text-neutral-700 dark:text-neutral-400"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+          ></path>
+        </svg>Mon compte</a
+        >
+      </nav>
+    </div>
+
+    <div
+      class="sticky w-full top-0 z-20 bg-white border-b border-gray-200 px-4 py-2"
+    >
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <a class="" href="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+              ></path>
+            </svg>
+          </a>
+          <span
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit">/</font></font
+            ></span
+          >
+          <turbo-frame id="book_4364_breadcrumb"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit">
+                Les animaux et le manguier sauvage
+              </font></font
+            ></turbo-frame
+          >
+        </div>
+
+        <div class="flex place-items-center space-x-2">
+          <div class="relative" data-controller="shared--dropdown">
+            <div
+              data-action="click->shared--dropdown#toggle click@window->shared--dropdown#hide touch->shared--dropdown#toggle touch@window->shared--dropdown#hide"
+              role="button"
+              class="flex select-none"
+            >
+              
+            </div>
+            <a class="button-primary " href="./assets/images/books/livre.pdf"  >Télécharger le pdf</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="flash">
+      <div class="flash"></div>
+    </div>
+
+    <div class="container">
+      <turbo-cable-stream-source
+        channel="Turbo::StreamsChannel"
+        signed-stream-name="IloybGtPaTh2WTNKbFlYUmxZbTl2YTJGcExYSmhhV3h6TDBKdmIyc3ZORE0yTkEi--c889148a5f3aad306976cc7d7f74809180f4b728a3ab53c30bc2e556cfd13aff"
+        connected=""
+      ></turbo-cable-stream-source>
+
+      <div id="preview">
+        <div id="book_4364" class="mt-8 pb-12">
+          <turbo-frame id="book_4364_details">
+            <div class="flex items-baseline">
+              <h1 class="h1">
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"
+                    >Les animaux et le manguier sauvage</font
+                  ></font
+                >
+              </h1>
+              <a
+                data-turbo-frame="modal"
+                class="text-accent-500 hover:text-accent-400 transition-colors"
+                href="/books/the-animals-and-the-wild-mango-tree/edit_details"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  class="w-5 h-5 ml-2"
+                >
+                  <path
+                    d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <p class="mt-2 font-lg">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit"
+                  >Dans une forêt africaine luxuriante, Sèti, une petite
+                  antilope sage, doit relever le défi de protéger ses amis les
+                  animaux des pièges tendus par Mbani le trappeur autour d'un
+                  manguier bien-aimé. Alors que les animaux ignorent les
+                  avertissements de Sèti et se font prendre, elle doit trouver
+                  le courage de les sauver et de prouver que la sagesse et le
+                  courage peuvent venir en petites quantités.</font
+                ></font
+              >
+            </p>
+          </turbo-frame>
+          <h2 class="h2 mt-12">
+            <font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                >Couverture du livre</font
+              ></font
+            >
+          </h2>
+          <p>
+            <font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                >La couverture est également la première page du livre.</font
+              ></font
+            >
+          </p>
+
+          <turbo-frame id="book_4364_cover_image">
+            <img
+              class="h-96 rounded-md mt-4"
+              src="./assets/images/books/Couverture.jpg"
+            />
+
+            <div id="cover_buttons">
+              <div class="mt-2 flex space-x-2">
+                <form
+                  class="button_to"
+                  method="post"
+                  action=""
+                >
+                  
+                </form>
+                
+              </div>
+            </div>
+          </turbo-frame>
+          <h2 class="h2 mt-12">
+            <font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit">Reste du livre</font></font
+            >
+          </h2>
+          <p>
+            <font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                >Vous pouvez personnaliser ici les pages individuelles. Vous
+                pouvez également personnaliser le texte de l'histoire.</font
+              ></font
+            >
+          </p>
+
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-1 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35613_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-1.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-2 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35613_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  action=""
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Au cœur de la forêt africaine, un manguier sauvage se dressait, grand et majestueux. Ses branches croulaient sous le poids de mangues juteuses, une friandise favorite des animaux de la forêt. Mais un danger se profilait. Mbani, le trappeur, voulait attraper les animaux, alors il construisit une clôture et posa des pièges autour de l’arbre. Les animaux, ignorants des pièges, couraient vers les mangues. La forêt était remplie d'inquiétude et de peur.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-2 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35614_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-2.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-1 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35614_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Sèti, la petite antilope sage, observait la scène se dérouler. Elle savait que les pièges étaient dangereux et voulait avertir ses amis.
+— Faites attention ! appela Sèti.
+— Il y a des pièges autour de l'arbre ! Mais les animaux étaient trop excités par les mangues pour l'écouter. Sèti se sentit triste en les regardant s'approcher du danger.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-1 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35615_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-3.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-2 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35615_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Malgré les avertissements de Sèti, certains animaux se retrouvèrent pris dans les pièges. La forêt résonnait de cris d’appel à l’aide. Sèti se sentait impuissante, car elle était petite et ne pouvait pas les libérer seule.
+— Je leur ai parlé des pièges, soupira-t-elle, frustrée.
+— Mais ils ne m’ont pas écoutée. La situation semblait empirer alors que Mbani revenait pour vérifier ses pièges.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-2 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35616_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-4.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-1 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35616_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Sèti pensa à abandonner. Après tout, elle n'était qu'une petite antilope.
+— Peut-être que je suis trop petite pour aider, murmura-t-elle pour elle-même.
+— Que puis-je faire ? Mais Sèti tenait profondément à ses amis. Elle ne pouvait pas simplement les laisser là. Son cœur était lourd, mais elle devait trouver un moyen d'être courageuse.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-1 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35617_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-5.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-2 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35617_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Dans ce moment de doute, une idée traversa l'esprit de Sèti. Elle se rappela un chemin secret qui menait de l'autre côté de l'arbre.
+— Je peux utiliser le chemin secret ! s'exclama-t-elle, sentant une lueur d'espoir. Avec un courage renouvelé, elle appela les animaux qui étaient encore libres.
+— Suivez-moi ! Je connais un autre chemin ! Sèti les guida vers la sécurité, grâce à sa sagesse et son courage.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+          
+
+          <div
+            class="mt-12 grid grid-cols-2 border border-gray-100 shadow-lg bg-white"
+          >
+            <div class="order-2 p-6 relative">
+              <div
+                class="absolute w-20 h-full top-0 left-0 bg-gradient-to-l from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35618_image">
+                <img
+                  class="max-w-full relative z-10"
+                  src="./assets/images/books/page-6.jpg"
+                />
+
+                
+              </turbo-frame>
+            </div>
+            <div class="order-1 relative">
+              <div
+                class="absolute w-20 h-full top-0 right-0 bg-gradient-to-r from-white to-gray-200"
+              ></div>
+              <turbo-frame id="chapter_35618_text">
+                <form
+                  class="relative z-10 p-6 mt-1"
+                  data-controller="chapters--text"
+                  
+                  accept-charset="UTF-8"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="_method"
+                    value="patch"
+                    autocomplete="off"
+                  />
+                  <textarea
+                    class="w-full pt-4 pb-8 px-6 text-xl leading-loose border-none bg-transparent focus:ring focus:ring-accent-400/60 rounded-lg resize-none"
+                    rows="13"
+                    data-action="input->chapters--text#update"
+                    data-chapters--text-target="textarea"
+                    name="chapter[text]"
+                    id="chapter_text"
+                  >
+Le plan de Sèti a fonctionné, et bientôt tous les animaux étaient en sécurité et libres. Ils se rassemblèrent autour d'elle, reconnaissants pour sa sagesse et son courage.
+— Merci, Sèti, s'écrièrent-ils.
+— Tu nous as sauvés ! La forêt vibrait de joie et de célébration. À partir de ce jour, les animaux écoutèrent Sèti, faisant confiance à sa petite sagesse, si puissante.</textarea
+                  >
+                  <div
+                    class="flex space-x-2 mt-2 hidden"
+                    data-chapters--text-target="buttons"
+                  >
+                    <button
+                      type="button"
+                      class="button-white"
+                      data-action="chapters--text#discard"
+                    >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Jeter</font
+                        ></font
+                      >
+                    </button>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        ><input
+                          type="submit"
+                          name="commit"
+                          value="Enregistrer les modifications"
+                          class="button-primary"
+                          data-action="chapters--text#save"
+                          data-disable-with="Save changes" /></font
+                    ></font>
+                  </div>
+                </form>
+              </turbo-frame>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="mt-auto border-t border-gray-200 p-3 text-sm">
+      <p class="">Sikul © 2024 by Alissa IA</p>
+
+      <div class="space-x-4">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Conditions d'utilisation
+        </a>
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Politique de confidentialité
+        </a>
+        
+      </div>
+    </div>
+
+    
+
+    
+
+    
+  </body>
+
+</html>

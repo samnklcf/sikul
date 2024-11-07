@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html class="h-full antialiased" lang="en">
+  <!-- Mirrored from app.createbookai.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Oct 2024 07:29:18 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    
+
+    <title>Log in | CrateBookAi</title>
+
+    <link rel="canonical" href="index.html" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.html" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f96416" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="_988_UnB7jvOJn7N8fgD62oArvOldtkWI1jcN3HxGJYj3x1bSXsOyAggSzO-m1YVapusRM04trLkJxsIo5xEKQ"
+    />
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="../rsms.me/inter/inter.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/application-875de01e.css"
+      data-turbo-track="reload"
+    />
+    <script
+      src="assets/application-246ed5db.js"
+      data-turbo-track="reload"
+      type="module"
+    ></script>
+    
+  </head>
+
+  <body class="bg-neutral-50 flex flex-col min-h-screen">
+    <div
+      class="bg-white flex w-full py-3 px-4 justify-between items-center border-b border-gray-200"
+    >
+      <div class="flex items-center">
+        <a
+          class="hover:opacity-70 transition-opacity flex items-start mr-10"
+          href="/home.html"
+        >
+          <img src="./assets/images/sik.png" width="50" srcset="">
+        </a>
+        <a
+          class="mr-6 hover:text-accent-600 transition-colors font-medium text-accent-600"
+          href="home.html"
+        >
+          <span>Mes livres</span>
+        </a>
+        <a
+          class="hover:text-accent-600 transition-colors font-medium text-neutral-700"
+          href="./community.html"
+        >
+          <span class="">Découvertes</span>
+        </a>
+      </div>
+
+      <nav class="flex items-center" data-controller="shared--darkmode">
+        <a
+          data-turbo-frame="modal"
+          class=" button-secondary mr-2"
+          href="/compte.html"
+          > <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewbox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="w-5 h-5 text-neutral-700 dark:text-neutral-400"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+          ></path>
+        </svg>Mon compte</a
+        >
+      </nav>
+    </div>
+
+    <div id="flash">
+      <div class="flash"></div>
+    </div>
+
+    <div class="container">
+      <h1 class="h1 !text-3xl mt-12">Community</h1>
+      <p class="text-xl mt-2 text-neutral-600">
+        Discover all the books made by other creators just like you.
+      </p>
+
+      <form
+        class="mt-8 mb-8 relative"
+        action="/community"
+        accept-charset="UTF-8"
+        method="get"
+      >
+        <input autocomplete="off" type="hidden" name="morals" id="morals" />
+        <input autocomplete="off" type="hidden" name="styles" id="styles" />
+        <input
+          class="input text-lg py-5 px-6"
+          placeholder="Search by any keyword - book name, topic, characters ..."
+          type="text"
+          name="search"
+          id="search"
+        />
+        <input
+          type="submit"
+          value="Search"
+          class="absolute right-4 top-1/2 -translate-y-1/2 button-primary"
+          data-disable-with="Search"
+        />
+      </form>
+
+      <div class="mb-8 flex flex-wrap gap-1">
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=courage"
+          >Courage</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=tolerance"
+          >Tolerance</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=honesty"
+          >Honesty</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=justice"
+          >Justice</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=wisdom"
+          >Wisdom</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?morals=charity"
+          >Charity</a
+        >
+
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?styles=pixar"
+          >Pixar style</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?styles=watercolor"
+          >Watercolor style</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?styles=vector"
+          >Vector style</a
+        >
+        <a
+          class="text-sm font-medium px-1.5 py-0.5 border border-neutral-300 text-neutral-700 bg-white rounded"
+          href="/community?styles=digital_art"
+          >Digital art style</a
+        >
+      </div>
+
+      <div data-controller="shared--infinite-scroll">
+        <div
+          id="community_books"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-animals-and-the-wild-mango-tree"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDQxMjksInB1ciI6ImJsb2JfaWQifX0=--0685691b3c22bbcd57bccb76a07dd1ce11838d41/book_4364_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">
+                The Animals and the Wild Mango Tree
+              </h2>
+              <p class="text-white truncate">
+                In a lush African forest, Sèti, a wise but small antelope, faces
+                the challenge of protecting her animal friends from the traps
+                set by Mbani the trapper around a beloved mango tree. As the
+                animals ignore Sèti&#39;s warnings and get caught, she must find
+                the courage to save them and prove that wisdom and bravery can
+                come in small packages.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/hazel-s-triple-trouble-41375484-9dab-447a-a0e5-b5e68b03a079"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDQxMjAsInB1ciI6ImJsb2JfaWQifX0=--80ac61156bd70493b5580298b67682492d8804c0/book_4363_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Hazel&#39;s Triple Trouble</h2>
+              <p class="text-white truncate">
+                At Hazel&#39;s third birthday party in Chennai, a mystery
+                unfolds when her birthday cake goes missing. Kadambari, a
+                talkative and playful friend, leads the group of young friends
+                to solve the problem. Through their adventure, they learn the
+                importance of honesty and teamwork.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/crocker-christmas-b72ecdef-0622-4c89-be05-269354f138fa"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDQxMTksInB1ciI6ImJsb2JfaWQifX0=--4690c6ee1ceee2071d6a48e89bc62d70fe9b2893/book_4362_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Crocker Christmas</h2>
+              <p class="text-white truncate">
+                Kristy, a passionate host, eagerly prepares for the annual
+                Crocker Christmas gathering. However, this year presents a
+                unique challenge. As the event unfolds, Kristy faces unexpected
+                obstacles, testing her ability to create a memorable celebration
+                for her friends. With determination and the support of her
+                friends, Kristy must navigate through these challenges to
+                preserve the cherished tradition of Crocker Christmas.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/crocker-christmas"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDQwNTgsInB1ciI6ImJsb2JfaWQifX0=--e67c2b50dfb81756d6e4ace186f9907eaadadfe6/book_4361_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Crocker Christmas</h2>
+              <p class="text-white truncate">
+                Kristy faces a snowstorm threatening the Crocker Park Christmas
+                Festival in Cleveland, Ohio, and learns the value of wisdom and
+                perseverance.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-prince-and-the-frog"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5OTgsInB1ciI6ImJsb2JfaWQifX0=--fe97c5fb31ec08f12d2b31e5a3f2a86ee0ea36ee/book_4360_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Prince and the Frog</h2>
+              <p class="text-white truncate">
+                In a mystical kingdom, a noble prince loses his precious ring in
+                a pond and encounters a peculiar frog who promises to retrieve
+                it for the price of friendship. As the prince grapples with his
+                hesitations, he embarks on a journey that challenges his
+                perceptions of beauty and acceptance. Through obstacles,
+                failures, and a magical transformation, the prince learns the
+                true value of kindness and tolerance.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-ups-and-downs-of-science-7c76a211-2333-4ee1-b992-1b594eb16b38"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5NzYsInB1ciI6ImJsb2JfaWQifX0=--9f52c7b2115190c0e0d43287693721fd3ae1abc7/book_4359_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Ups and Downs of Science</h2>
+              <p class="text-white truncate">
+                Follow Michelle, a young professor at the University of
+                Wisconsin, as she navigates the challenges of pursuing a
+                promotion amidst the trials of mental health. With courage and
+                determination, she faces setbacks and learns to embrace her
+                diagnosis, ultimately becoming an advocate for mental health
+                awareness in the scientific community.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/a-fisica-te-move"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5NjUsInB1ciI6ImJsb2JfaWQifX0=--2c9a2c807b5d4cc7420f7c947f40ce0eb7be3572/book_4358_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">A Física te Move</h2>
+              <p class="text-white truncate">
+                In the heart of Mato Grosso, a curious 12-year-old named Makinha
+                is determined to solve a puzzling mystery involving a runaway
+                bicycle. As Makinha faces obstacles and moments of doubt, she
+                learns about the wonders of physics and the power of wisdom
+                through her humble and determined nature. Join Makinha on her
+                journey of discovery and adventure, filled with lessons that
+                transcend the boundaries of science.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-adventure-of-little-lily"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5NTksInB1ciI6ImJsb2JfaWQifX0=--9636ef2871b3ad5cd6a2172b17f5ee6d6a408581/book_4357_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Adventure of Little Lily</h2>
+              <p class="text-white truncate">
+                Join Lily, a curious and kind-hearted girl from China, as she
+                embarks on an adventure filled with challenges and lessons about
+                courage, kindness, respect, and generosity.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-ups-and-downs-of-science"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5NTAsInB1ciI6ImJsb2JfaWQifX0=--1ba257a7b6aee6a8c960f8985b61334f920192b7/book_4356_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Ups and Downs of Science</h2>
+              <p class="text-white truncate">
+                Michelle, a passionate young scientist at a Wisconsin
+                university, embarks on a journey to solve an important
+                scientific problem while battling her own personal challenges.
+                With courage and perseverance, she faces obstacles, experiences
+                a breakthrough, and ultimately finds strength within herself.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/fire-and-ice-girl"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5MzYsInB1ciI6ImJsb2JfaWQifX0=--d0874c19692a17a556f0f5387b45358c2462b9e8/book_4355_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Fire and Ice Girl</h2>
+              <p class="text-white truncate">
+                Join Skylar, a young girl with the power of fire and ice, as she
+                embarks on a magical journey to bring harmony to Garden City,
+                Long Island. Faced with the challenge of stopping a fierce storm
+                that threatens her beloved home, Skylar must learn the true
+                meaning of tolerance and balance. Will she overcome her fears
+                and obstacles to save the day?
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/sophie-s-spooky-story"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5MzUsInB1ciI6ImJsb2JfaWQifX0=--4b35537541f967def16930608768a2b7c319267b/book_4354_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Sophie&#39;s Spooky Story</h2>
+              <p class="text-white truncate">
+                Sophie, a young and adorable Frankenstein monster, lives in
+                Halloweentown. Sophie loves decorating for Halloween, but she
+                discovers that many of her friends don&#39;t have costumes for
+                the big party. Determined to help, Sophie faces a series of
+                spooky challenges. Will she find a way to make sure everyone has
+                a costume in time for the Halloween celebration?
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/caminho-para-o-emagrecimento-saudavel"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5MTgsInB1ciI6ImJsb2JfaWQifX0=--b1e89b7b4ef89929762df59bf410a5dd25efa75c/book_4353_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">
+                Vitor&#39;s Courageous Journey
+              </h2>
+              <p class="text-white truncate">
+                Vitor, a determined teen, embarks on a journey to achieve a
+                healthy lifestyle in the park. Faced with overwhelming
+                challenges and moments of doubt, Vitor struggles to overcome his
+                insecurities and finds the courage to push through, leading to a
+                transformative and inspiring journey.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/thiago-vs-sonic"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM5MTAsInB1ciI6ImJsb2JfaWQifX0=--aa51937fb216f035c55519b4e38191884f25b8cc/book_4352_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Thiago vs Sonic</h2>
+              <p class="text-white truncate">
+                Thiago, a determined young boy from Rondônia, Brazil, faces a
+                challenge when he decides to race against Sonic, his favorite
+                video game character. As he struggles with his competitive
+                nature, Thiago learns the importance of tolerance and accepting
+                failure with grace.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/leeuw-luiaard-ademavonturen-in-de-jungle"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4ODcsInB1ciI6ImJsb2JfaWQifX0=--52ebd638a09b361ff636623190c8a01fdf754f52/book_4350_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">
+                Leeuw &amp; Luiaard: Ademavonturen in de jungle
+              </h2>
+              <p class="text-white truncate">
+                In het hart van de weelderige jungle ontdekken Leeuw en Luiaard
+                de magie van ademhaling. Leeuw, altijd snel en ongeduldig, moet
+                leren hoe hij kan kalmeren met de hulp van de rustige Luiaard.
+                Maar als Leeuw moeite heeft met het oplossen van een groot
+                probleem, moeten ze samenwerken en leren dat de juiste
+                ademhaling de sleutel kan zijn tot hun succes.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/o-menino-e-o-game-proibido-f03b5a0d-18a6-4437-bebe-6e96491fce27"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4NzIsInB1ciI6ImJsb2JfaWQifX0=--79acfa7b24d1f35e0596be3e034d1752e1e4ca8e/book_4348_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">O Menino e o Game Proibido</h2>
+              <p class="text-white truncate">
+                Heitor, a curious boy, finds himself trapped in a forbidden game
+                full of challenges and monsters. As he navigates through this
+                virtual world, he learns the true meaning of courage.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-honest-one"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4NTIsInB1ciI6ImJsb2JfaWQifX0=--36e7258d330f65a1b1d8d99ee570435787544b88/book_4347_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Honest One</h2>
+              <p class="text-white truncate">
+                In a delightful springtime adventure, Rose, a curious young
+                girl, finds herself tangled in a web of secrets spun by her
+                younger sister, Lily. As the truth unfolds, Rose faces the
+                challenge of teaching Lily the importance of honesty. Will
+                Rose&#39;s determination shine through, or will the sisters&#39;
+                bond unravel under the weight of hidden truths?
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/the-honest-girl"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4NTAsInB1ciI6ImJsb2JfaWQifX0=--b8d80c2cd1929d4c9aa6aed208019e82b91159c9/book_4346_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">The Honest Girl</h2>
+              <p class="text-white truncate">
+                Rose, a young and honest girl, faces a challenge at school when
+                a classmate, Jake, tells a big lie. As she navigates obstacles
+                and struggles with her own doubts, Rose learns to stand by her
+                values and helps Jake discover the importance of honesty.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/a-trip-into-town"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4MzQsInB1ciI6ImJsb2JfaWQifX0=--bcc28bd84380dbbdabc50a0a91384ab90d86a3b1/book_4345_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">A Trip into Town</h2>
+              <p class="text-white truncate">
+                Maggie&#39;s journey into Belgrade with her Aunt and Grahame
+                tests her courage when she loses her sunglasses, a gift from her
+                mom, causing her to question herself. She faces challenges,
+                considers giving up, but discovers the value of perseverance.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/a-trip-to-town"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4MjcsInB1ciI6ImJsb2JfaWQifX0=--38cda21161a46ea1c27ed8d5f7ecb020c02d28cd/book_4344_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">A Trip to Town</h2>
+              <p class="text-white truncate">
+                Maggie, a cheerful six-year-old, goes on an exciting trip to
+                Belgrade with her colorful sunglasses, only to face unexpected
+                challenges. Along the way, she learns the value of tolerance and
+                understanding different perspectives.
+              </p>
+            </div> </a
+          ><a
+            class="relative rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all"
+            href="/community/books/mom-i-need-glasses"
+          >
+            <div
+              class="absolute top-1/4 left-0 w-full bottom-0 bg-gradient-to-t from-black/70 to-transparent"
+            ></div>
+            <img
+              class=""
+              src="https://app.createbookai.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDM4MjAsInB1ciI6ImJsb2JfaWQifX0=--a73344108aa9b82b6c7011dd42532c3a730225b1/book_4343_cover_image.jpg"
+            />
+            <div class="absolute bottom-4 w-full px-4">
+              <h2 class="text-white font-bold">Mom, I Need Glasses!</h2>
+              <p class="text-white truncate">
+                Billy, a curious six-year-old, envies his friend Sarah, the
+                smartest kid in class. Convinced that her glasses are the secret
+                to her wisdom, he embarks on a quest to get his own pair, only
+                to face a series of humorous challenges. Will Billy find the
+                true source of wisdom?
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div data-shared--infinite-scroll-target="scrollArea"></div>
+        <div
+          id="pagination"
+          class="hidden"
+          data-shared--infinite-scroll-target="pagination"
+        >
+          <nav class="pagy nav" aria-label="Pages">
+            <a role="link" aria-disabled="true" aria-label="Previous">&lt;</a
+            ><a
+              role="link"
+              aria-disabled="true"
+              aria-current="page"
+              class="current"
+              >1</a
+            ><a href="/community?page=2">2</a><a href="/community?page=3">3</a
+            ><a href="/community?page=4">4</a><a href="/community?page=5">5</a
+            ><a role="link" aria-disabled="true" class="gap">&hellip;</a
+            ><a href="/community?page=182">182</a
+            ><a href="/community?page=2" aria-label="Next">&gt;</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-auto border-t border-gray-200 p-3 text-sm">
+      <p class="">Sikul © 2024 by Alissa IA</p>
+
+      <div class="space-x-4">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Conditions d'utilisation
+        </a>
+        <a
+          href="#"
+          class="text-gray-500 hover:text-gray-700"
+        >
+        Politique de confidentialité
+        </a>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+}
+
+.palette {
+    display: grid;
+    grid-template-columns: repeat(2, 50px); /* 2 colonnes */
+    gap: 5px; /* Espace entre les éléments */
+    margin: 20px 0; /* Espacement autour de la grille */
+   
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#brush-size {
+    width: 100%;
+    margin: 10px 0;
+}
+
+button {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#canvas {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+}
+
+#canvas:hover{
+    cursor: url('./pm.png'), auto;
+}
