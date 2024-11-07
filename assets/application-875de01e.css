@@ -2563,3 +2563,12 @@ button[disabled] .when-enabled {
     padding-right: 2rem;
   }
 }
+
+@media (max-width: 1000px) {
+  /* Cacher tout le contenu du site */
+  body {
+    display: none !important;
+  }
+
+}
+
